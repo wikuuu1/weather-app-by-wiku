@@ -76,6 +76,7 @@ body {
   
   /**WIADOMOŚCI*/
   section.features {
+    
     padding-top: 15px;
     margin-top: 25px;
     font-size: 14px;
@@ -161,3 +162,6 @@ body {
     text-align: center;
   }
   
+  a {
+    font-size: 40px;
+  }
