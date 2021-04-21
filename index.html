@@ -23,38 +23,73 @@
         <div class="buttons">
           <form class="search-bar" id="search-form">
             <input type="text" placeholder="Choose your city" class="city" id="currentCity" />
-            <input type="submit" value="Search" class="lupa" id="search-form" />
+            <input type="submit" value="Search" class="submit" id="search-form" />
+<h1 id="localization">fsdse</h1>
           </form>
         </div>
-
-
         <div class="row">
-          <div class="col-8">
-            <h1 id="localization">Localization </h1>
-            <p class="today">Current Day</p>
-            <p class="actuallTemp">
-              <span id="actuallTemp">12</span>°
-            </p>
+          <div class="col-4">
+            <div class="currentDate">
+              <li class="today">Current Day</li>
+              <li class="date">28/02/2021</li>
+            </div>
+
+          </div>
+          <div class="col-4">
+
+            
 
             <span class="icon"><i class="fas fa-cloud-sun"></i></span>
 
+            <div class="float-left">
+              <strong id="temperature"></strong><span class="units">
+                <a href="#" id="celsius-link" class="active">°C</a> |
+                <a href="#" id="fahrenheit-link">°F</a></span>
+            </div>
+          </div>
+          <div class="col-4">
+            <section class="features">
+              <div class="informationTitle">Current time
+                <p class="informationSubtitle">16:20</p>
+              </div>
+            </section>
+            <div class="informationTitle">Humidity
+              <p class="informationSubtitle"><span id="actuallHumidity">70</span>%</p>
+            </div>
+            <div class="informationTitle">Wind speed
+              <p class="informationSubtitle"><span id="windSpeed">70</span>km/h</p>
+              </p>
+
+            </div>
+            </section>
+
           </div>
           <!--WIADOMOŚCI-->
-          <div class="col-4">
+          <!-- <div class="col-3">
 
             <section class="features">
-              <div class="date">Date
-                <p class="date">28/02/2021</p>
+              <div class="informationTitle">Date
+                <p class="informationSubtitle">28/02/2021</p>
 
               </div>
-              <div class="currentTime">Current time
-                <p class="time">16:20</p>
-              </div>
-              <div class="humidity">Humidity
-                <p class="wilgoc"><span id="actuallHumidity">70</span>%</p>
+              <div class="informationTitle">Current time
+                <p class="informationSubtitle">16:20</p>
               </div>
             </section>
           </div>
+          <div class="col-3">
+
+            <section class="features">
+              <div class="informationTitle">Humidity
+                <p class="informationSubtitle"><span id="actuallHumidity">70</span>%</p>
+              </div>
+              <div class="informationTitle">Wind speed
+                <p class="informationSubtitle"><span id="windSpeed">70</span>km/h</p>
+                </p>
+
+              </div>
+            </section>
+          </div> -->
         </div>
 
         <!--DNI TYGODNIA-->
@@ -62,7 +97,7 @@
           <div class="col-3">
             <ul class="nextDays">
               <li class="day">Monday</li>
-              <li class="temperature"><span>12</span>°</li>
+              <li class="temperatures"><span>12</span>°</li>
               <li class="icons"><i class="fas fa-cloud-sun"></i></li>
             </ul>
 
@@ -70,7 +105,7 @@
           <div class="col-3">
             <ul class="nextDays">
               <li class="day">Tuesday</li>
-              <li class="temperature"><span>12</span>°</li>
+              <li class="temperatures"><span>12</span>°</li>
               <li class="icons"><i class="fas fa-cloud-sun"></i></li>
             </ul>
 
@@ -78,7 +113,7 @@
           <div class="col-3">
             <ul class="nextDays">
               <li class="day">Wednesday</li>
-              <li class="temperature"><span>12</span>°</li>
+              <li class="temperatures"><span>12</span>°</li>
               <li class="icons"><i class="fas fa-cloud-sun"></i></li>
             </ul>
           </div>
@@ -86,7 +121,7 @@
           <div class="col-3">
             <ul class="nextDays">
               <li class="day">Thursday</li>
-              <li class="temperature"><span>12</span>°</li>
+              <li class="temperatures"><span>12</span>°</li>
               <li class="icons"><i class="fas fa-cloud-sun"></i></li>
             </ul>
 
