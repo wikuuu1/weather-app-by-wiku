@@ -29,16 +29,16 @@ body {
   input.city {
     width: 250px;
     margin: 10px 0;
-    font-size: 12px;
+    font-size: 16px;
   
   }
   
   input.lupa {
-    width: 60px;
-    height: 20px;
+    width: 100px;
+    height: 30px;
     text-align: center;
-    font-size: 10px;
-    margin: 6px 15px;
+    font-size: 12px;
+    margin: 10px 15px;
   }
   
   input:hover {
@@ -50,10 +50,10 @@ body {
   
   
   h1.localization {
-    font-size: 25px;
+    font-size: 30px;
     margin: 20px 0px 5px 0px;
     padding: 10px 0 0 0;
-    font-weight: 900;
+    font-weight: bold;
     text-transform: uppercase;
   }
   

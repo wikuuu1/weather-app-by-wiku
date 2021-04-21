@@ -1,100 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/da945f8466.js" crossorigin="anonymous">
-  </script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <link rel="stylesheet" href="weather.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/da945f8466.js" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="weather.css">
 
-  <title>Weather</title>
-</head>
+    <title>Weather</title>
+  </head>
 
-<body>
-  <div class="container">
-    <div class="all">
-      <div class="buttons">
-        <form class="search-bar" id="search-form">
-          <input type="text" placeholder="Choose your city" class="city" id="currentCity" />
-          <input type="submit" value="Search" class="lupa" id="search-form" />
-        </form>
-      </div>
-
-
-      <div class="row">
-        <div class="col-8">
-          <h1 class="localization">Localization </h1>
-          <p class="today">Current Day</p>
-          <p class="actuallTemp">
-            <span id="actuallTemp">12</span>°
-          </p>
-  
-          <span class="icon"><i class="fas fa-cloud-sun"></i></span>
-
-        </div>
-        <!--WIADOMOŚCI-->
-        <div class="col-4">
-
-          <section class="features">
-            <div class="date">Date
-              <p class="date">28/02/2021</p>
-
-            </div>
-            <div class="currentTime">Current time
-              <p class="time">16:20</p>
-            </div>
-            <div class="humidity">Humidity
-              <p class="wilgoc"><span id="actuallHumidity">70</span>%</p>
-            </div>
-          </section>
-        </div>
-      </div>
-
-      <!--DNI TYGODNIA-->
-      <div class="row AllWeek">
-        <div class="col-3">
-          <ul class="nextDays">
-            <li class="day">Monday</li>
-            <li class="temperature"><span>12</span>°</li>
-            <li class="icons"><i class="fas fa-cloud-sun"></i></li>
-          </ul>
-
-        </div>
-        <div class="col-3">
-          <ul class="nextDays">
-            <li class="day">Tuesday</li>
-            <li class="temperature"><span>12</span>°</li>
-            <li class="icons"><i class="fas fa-cloud-sun"></i></li>
-          </ul>
-
-        </div>
-        <div class="col-3">
-          <ul class="nextDays">
-            <li class="day">Wednesday</li>
-            <li class="temperature"><span>12</span>°</li>
-            <li class="icons"><i class="fas fa-cloud-sun"></i></li>
-          </ul>
+  <body>
+    <div class="container">
+      <div class="all">
+        <div class="buttons">
+          <form class="search-bar" id="search-form">
+            <input type="text" placeholder="Choose your city" class="city" id="currentCity" />
+            <input type="submit" value="Search" class="lupa" id="search-form" />
+          </form>
         </div>
 
-        <div class="col-3">
-          <ul class="nextDays">
-            <li class="day">Thursday</li>
-            <li class="temperature"><span>12</span>°</li>
-            <li class="icons"><i class="fas fa-cloud-sun"></i></li>
-          </ul>
 
+        <div class="row">
+          <div class="col-8">
+            <h1 id="localization">Localization </h1>
+            <p class="today">Current Day</p>
+            <p class="actuallTemp">
+              <span id="actuallTemp">12</span>°
+            </p>
+
+            <span class="icon"><i class="fas fa-cloud-sun"></i></span>
+
+          </div>
+          <!--WIADOMOŚCI-->
+          <div class="col-4">
+
+            <section class="features">
+              <div class="date">Date
+                <p class="date">28/02/2021</p>
+
+              </div>
+              <div class="currentTime">Current time
+                <p class="time">16:20</p>
+              </div>
+              <div class="humidity">Humidity
+                <p class="wilgoc"><span id="actuallHumidity">70</span>%</p>
+              </div>
+            </section>
+          </div>
         </div>
-        <footer><i>made by WR</i></footer>
+
+        <!--DNI TYGODNIA-->
+        <div class="row AllWeek">
+          <div class="col-3">
+            <ul class="nextDays">
+              <li class="day">Monday</li>
+              <li class="temperature"><span>12</span>°</li>
+              <li class="icons"><i class="fas fa-cloud-sun"></i></li>
+            </ul>
+
+          </div>
+          <div class="col-3">
+            <ul class="nextDays">
+              <li class="day">Tuesday</li>
+              <li class="temperature"><span>12</span>°</li>
+              <li class="icons"><i class="fas fa-cloud-sun"></i></li>
+            </ul>
+
+          </div>
+          <div class="col-3">
+            <ul class="nextDays">
+              <li class="day">Wednesday</li>
+              <li class="temperature"><span>12</span>°</li>
+              <li class="icons"><i class="fas fa-cloud-sun"></i></li>
+            </ul>
+          </div>
+
+          <div class="col-3">
+            <ul class="nextDays">
+              <li class="day">Thursday</li>
+              <li class="temperature"><span>12</span>°</li>
+              <li class="icons"><i class="fas fa-cloud-sun"></i></li>
+            </ul>
+
+          </div>
+          <footer><i>made by WR</i></footer>
+        </div>
       </div>
     </div>
-  </div>
 
-  <script src="temperature.js"></script>
-<a href="https://github.com/wikuuu1/weather-app-trial">GITHUB LINK</a>
-</body>
+    <script src="temperature.js"></script>
+    <a href="https://github.com/wikuuu1/weather-app-trial">GITHUB LINK</a>
+  </body>
