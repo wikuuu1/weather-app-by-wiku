@@ -89,11 +89,12 @@ div.float-left {
 }
 
 img.icon {
-  display: block;
+  vertical-align: top;
+  margin: 0;
   padding: 0;
-  text-align: center;
-
-  color: yellow;
+  height: 64px;
+  width: 64px;
+  ;
 }
 
 
