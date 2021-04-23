@@ -16,8 +16,6 @@ div.all {
   border-radius: 10px;
 }
 
-
-
 /*WYSZUKIWANIE MIASTA*/
 input {
   border: 2px solid rgb(2, 10, 141);
@@ -51,9 +49,8 @@ input:hover {
 /* INFORMACJE DODATKOWE */
 
 h1#localization {
+
   font-size: 28px;
-  margin: 10px 0px 5px 0px;
-  padding: 15px 0 0 0;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -61,25 +58,26 @@ h1#localization {
 
 div.currentDate {
   list-style: none;
-  font-size: 22px;
   margin: 40px 0 10px 0;
-  font-weight: 600;
-  
-}
-.currentDate li {
-  margin: 30px 0 10px 0;
-}
-.float-left a {
-  font-size: 22px;
-  margin-bottom: 5px;
+  font-weight: 800;
+
 }
 
+.currentDate li.today {
+  font-size: 18px;
+  margin: 7px 0 10px 0;
+}
+
+.float-left a {
+  font-size: 21px;
+  margin-bottom: 5px;
+}
 
 div span.icon {
   display: block;
   text-align: center;
-  margin-top: 5px;
-  font-size: 60px;
+  margin: 5px 0 5px 0;
+  font-size: 50px;
   color: yellow;
 }
 
@@ -87,9 +85,9 @@ div span.icon {
 /**WIADOMOŚCI*/
 section.features {
 
-  padding-top: 10px;
-  margin-top: 10px;
-  font-size: 16px;
+  padding-top: 20px;
+  margin-top: 60px;
+  font-size: 17px;
 
 }
 
@@ -104,14 +102,14 @@ p.informationSubtitle {
 
 }
 
-
-
-
 /*DNI TYGODNIA*/
-div.col-3 {
+div#forecast {
   margin: 0;
-  padding: 0;
   padding: 5px;
+  opacity: 0.8;
+}
+div#forecast:hover {
+  opacity: 1.0;
 }
 
 ul.nextDays {
@@ -132,14 +130,14 @@ ul li {
 li.day {
   margin: 3px;
   padding: 6px;
-  font-size: 16px;
-  font-weight: 900;
+  font-size: 17px;
+  font-weight: bold;
   margin-top: 5px;
 }
 
 li.temperatures {
   line-height: 15px;
-  font-size: 18px;
+  font-size: 20px;
   padding: 0;
   margin: 0;
 }
