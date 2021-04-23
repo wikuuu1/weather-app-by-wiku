@@ -72,9 +72,15 @@ div.float-left {
   font-weight: normal;
 }
 
-.units {
+.float-left .units {
   position: relative;
   top: -10px;
+}
+
+.float-left .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
 }
 
 .float-left a {
@@ -86,7 +92,7 @@ img.icon {
   display: block;
   padding: 0;
   text-align: center;
-  font-size: 1px;
+
   color: yellow;
 }
 
