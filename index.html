@@ -30,17 +30,16 @@
         <div class="row">
           <div class="col-6">
             <div class="currentDate">
-              <h1 id="localization">sjsdjdcn</h1>
-              <li class="today">Current Day</li>
-
+              <h1 id="localization"></h1>
             </div>
 
             <div class="float-left">
-              <strong id="temperature">6</strong><span class="units">
+              <strong id="temperature"></strong><span class="units">
                 <a href="#" id="celsius-link" class="active">°C</a> |
                 <a href="#" id="fahrenheit-link">°F</a></span>
             </div>
-            <span class="icon"><i class="fas fa-cloud-sun"></i></span>
+            <span>
+            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="" id="icon" class="float-left"></span>
           </div>
 
           <!--WIADOMOŚCI-->
@@ -48,12 +47,13 @@
           <div class="col-3">
             <section class="features">
               <div class="informationTitle">Date
-                <p class="informationSubtitle">28/02/2021</p>
+                <p class="informationSubtitle" id="date">28/02/2021</p>
 
               </div>
-              <div class="informationTitle">Current time
-                <p class="informationSubtitle">16:20</p>
+              <div class="informationTitle">Last updated
+                <p class="informationSubtitle" id="time">16:20</p>
               </div>
+
             </section>
           </div>
           <div class="col-3">
