@@ -2,11 +2,16 @@ function displayWeather(response) {
 
   let cityElement = document.querySelector("#localization");
   let humidityElement = document.querySelector("#actuallHumidity");
+  let windElement = document.querySelector("#windSpeed");
+  let temperatureElement = document.querySelector("#temperature");
 
 
   cityElement.innerHTML = response.data.name;
   humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 
+  celsiusTemperature = response.data.main.temp;
 }
 
 function search(city) {
