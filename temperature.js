@@ -24,6 +24,29 @@ function formatDate(timestamp) {
 
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thursday", "Friday", "Saturday"];
+  days.forEach(function (day) {
+
+    forecastHTML = forecastHTML +
+      `   
+            <div class="col-3">
+              <div class="nextDays">
+                <div class="forecast-day">Monday</div>
+                <div class="nextDays-temperatures">
+                  <span class="weather-forecast-temp-max">12</span>° |
+                  <span class="weather-forecast-temp-min">6</span>
+                </div>
+                <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="" id="icons" width="45"></span>
+              </div>
+            </div> `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function displayWeather(response) {
 
@@ -40,7 +63,8 @@ function displayWeather(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   temperatureObject.innerHTML = Math.round(celsiusTemperature);
   timeElement.innerHTML = formatDate(response.data.dt * 1000);
-  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute("src", `
+  http: //openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
@@ -83,6 +107,8 @@ function displayCelsiusTemperature(event) {
 }
 // FOR SUBMITING AFTER CLICKING THE BUTTON SEARCH
 let celsiusTemperature = null;
+
+displayForecast();
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
