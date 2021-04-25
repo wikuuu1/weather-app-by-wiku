@@ -129,12 +129,6 @@ div.nextDays {
   box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
 }
 
-ul li {
-  display: block;
-  text-align: center;
-  margin: 2px 2px 0 2px;
-}
-
 div.forecast-day {
   margin: 3px;
   padding: 6px;
@@ -143,10 +137,19 @@ div.forecast-day {
   margin-top: 5px;
 }
 
+.forecast-day:hover {
+  font-weight: bold;
+  font-size: 19px;
+}
+
 div.nextDays-temperatures {
   line-height: 15px;
   padding: 0;
   margin: 0;
+}
+
+.weather-forecast-temp-min {
+  opacity: 0.7;
 }
 
 #icons {
@@ -159,13 +162,4 @@ footer.sign {
   padding-top: 5px;
   margin: 10px 0 0 0;
   text-align: center;
-}
-
-a {
-  font-size: 40px;
-}
-
-.forecast-day:hover {
-  font-weight: bold;
-  font-size: 19px;
 }
