@@ -8,7 +8,7 @@ body {
 div.all {
   font-family: 'Poppins', Arial, sans-serif;
   text-align: center;
-  padding: 15px;
+  padding: 15px 15px 0 15px;
   border: 3px solid rgb(2, 10, 141);
   background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
   margin: 5px 0 0 0;
@@ -65,16 +65,15 @@ div.currentDate {
 
 
 div.float-left {
-  margin-top: 5px;
-  padding-top: 5px;
+  margin: 5px 0 0 0;
+  padding: 5px 0 0 0;
   font-size: 25px;
-
   font-weight: normal;
 }
 
 .float-left .units {
   position: relative;
-  top: -10px;
+  top: -8px;
 }
 
 .float-left .active {
@@ -87,16 +86,6 @@ div.float-left {
   font-size: 18px;
 
 }
-
-img.icon {
-  vertical-align: top;
-  margin: 0;
-  padding: 0;
-  height: 64px;
-  width: 64px;
-  ;
-}
-
 
 /**WIADOMOŚCI*/
 section.features {
@@ -126,11 +115,13 @@ div#forecast {
 }
 
 div#forecast:hover {
+
   opacity: 1.0;
 }
 
-ul.nextDays {
+div.nextDays {
   list-style: none;
+  font-size: 18px;
   padding-inline-start: 0px;
   border: 2px solid rgb(32, 57, 110);
   border-radius: 50px;
@@ -144,35 +135,37 @@ ul li {
   margin: 2px 2px 0 2px;
 }
 
-li.day {
+div.forecast-day {
   margin: 3px;
   padding: 6px;
-  font-size: 17px;
+
   font-weight: bold;
   margin-top: 5px;
 }
 
-li.temperatures {
+div.nextDays-temperatures {
   line-height: 15px;
-  font-size: 20px;
   padding: 0;
   margin: 0;
 }
 
-li.icons {
-  margin-bottom: 5px;
-  font-size: 32px;
-  color: yellow;
+#icons {
+  margin: 10px;
+
 }
 
-
-footer {
+footer.sign {
   font-size: 10px;
   padding-top: 5px;
-  margin: 0;
+  margin: 10px 0 0 0;
   text-align: center;
 }
 
 a {
   font-size: 40px;
+}
+
+.forecast-day:hover {
+  font-weight: bold;
+  font-size: 19px;
 }
