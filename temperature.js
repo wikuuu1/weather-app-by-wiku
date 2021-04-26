@@ -23,19 +23,20 @@ function formatDate(timestamp) {
   return ` ${day} ${hours}:${minutes}`;
 
 }
-
+// ADDING FORECAST
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
+  let days = ["Thursday", "Friday", "Saturday", "Sunday"];
+
   let forecastHTML = `<div class="row">`;
-  let days = ["Thursday", "Friday", "Saturday"];
-  days.forEach(function (day) {
+  days.forEach(function (days) {
 
     forecastHTML = forecastHTML +
       `   
             <div class="col-3">
               <div class="nextDays">
-                <div class="forecast-day">Monday</div>
+                <div class="forecast-day">${days}</div>
                 <div class="nextDays-temperatures">
                   <span class="weather-forecast-temp-max">12</span>° |
                   <span class="weather-forecast-temp-min">6</span>
@@ -56,6 +57,7 @@ function displayWeather(response) {
   let temperatureObject = document.querySelector("#temperature");
   let timeElement = document.querySelector("#time");
   let iconElement = document.querySelector("#icon");
+  let descriptionElement = document.querySelector(".description");
 
   celsiusTemperature = response.data.main.temp;
   cityElement.innerHTML = response.data.name;
@@ -67,6 +69,7 @@ function displayWeather(response) {
   http: //openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
 // SEARCH ENGINE
 function search(city) {
