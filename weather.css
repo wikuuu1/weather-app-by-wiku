@@ -3,6 +3,8 @@ body {
   margin: 0 auto;
   text-align: center;
   width: 45%;
+  line-height: 1.25;
+ 
 }
 
 div.all {
@@ -27,8 +29,10 @@ input {
 
 input#currentCity {
   width: 60%;
-  margin: 10px 0;
+  height: 30px;
+  margin: 0 0;
   font-size: 16px;
+  padding: 0;
     
 }
 
@@ -37,7 +41,8 @@ input.submit {
   height: 30px;
   text-align: center;
   font-size: 14px;
-  margin: 10px 15px;
+  margin: 0px 15px;
+  padding: 0;
   background-color: #E8F0FE;
 }
 
