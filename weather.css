@@ -22,14 +22,14 @@ input {
   border-radius: 10px;
   display: inline-block;
   text-align: center;
-  background-color: rgb(247, 245, 242);
+ 
 }
 
-input.city {
+input#currentCity {
   width: 60%;
   margin: 10px 0;
   font-size: 16px;
-
+    
 }
 
 input.submit {
@@ -38,6 +38,7 @@ input.submit {
   text-align: center;
   font-size: 14px;
   margin: 10px 15px;
+  background-color: #E8F0FE;
 }
 
 input:hover {
@@ -47,14 +48,20 @@ input:hover {
 }
 
 /* INFORMACJE DODATKOWE */
-
+div.col-6 {
+  padding: 0;
+}
 h1#localization {
 
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
   text-transform: uppercase;
 }
-
+p.today {
+  font-size: 20px;
+  margin-bottom: 1px;
+  padding: 0;
+}
 div.currentDate {
   margin: 40px 0 10px 0;
   font-weight: 800;
@@ -63,8 +70,8 @@ div.currentDate {
 
 div.float-left {
   margin: 5px 0 0 0;
-  padding: 5px 0 5px 0;
-  font-size: 27px;
+  padding: 2px 0 2px 0;
+  font-size: 24px;
   font-weight: normal;
 }
 
@@ -74,7 +81,7 @@ div.float-left {
 }
 
 .float-left a {
-  font-size: 18px;
+  font-size: 16px;
  
 }
 
@@ -86,10 +93,9 @@ div.float-left {
 
 
 p.description {
-  font-size: 20px;
-  margin: 2px 0 0 0;
+  font-size: 18px;
+  margin: 0;
   padding: 0;
-
 
 }
 
@@ -97,6 +103,10 @@ p.description::first-letter {
   text-transform: capitalize;
 }
 
+img#icon {
+  position: relative;
+  top: -20px;
+}
 /**WIADOMOŚCI*/
 section.features {
 
@@ -117,7 +127,7 @@ p.informationSubtitle {
 
 /*DNI TYGODNIA*/
 div.col-2 {
-  padding: 3px;
+  padding: 4px;
 }
 
 div.nextDays {
@@ -163,7 +173,7 @@ footer.sign {
   color: black;
   text-decoration: none;
   font-size: 12px;
-  margin: 20px 0 0 0;
+  margin: 10px 0 0 0;
   text-align: center;
 }
 

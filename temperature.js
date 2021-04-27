@@ -1,4 +1,4 @@
-// FOR HAVING AN ACTUALL DAY AND TIME 
+// FOR HAVING AN LAST UPDATED TIME 
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -23,6 +23,23 @@ function formatDate(timestamp) {
   return ` ${day} ${hours}:${minutes}`;
 
 }
+// ADDING A TODAY DAY 
+function formatToday(timestamp) {
+  let date = new Date(timestamp);
+  
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return ` ${day} `;
+
+}
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -35,9 +52,10 @@ function formatDay(timestamp) {
     "Thursday",
     "Friday",
     "Saturday",
+    "Sunday"
   ];
 
-  return days[day];
+  return days[day + 1];
 
 
 }
@@ -52,13 +70,13 @@ function displayForecast(response) {
 
 
   let forecastHTML = `<div class="row">`;
-  
+
   forecast.forEach(function (forecastDay, index) {
 
-    if (index < 6 ) {
+    if (index < 6) {
 
-    forecastHTML = forecastHTML +
-      `   
+      forecastHTML = forecastHTML +
+        `   
             <div class="col-2">
               <div class="nextDays">
                 <div class="forecast-day">${formatDay(forecastDay.dt)}</div>
@@ -69,7 +87,8 @@ function displayForecast(response) {
                 <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" id="icons" width="70"></span>
               </div>
             </div> `;
-  }});
+    }
+  });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
@@ -92,6 +111,8 @@ function displayWeather(response) {
   let timeElement = document.querySelector("#time");
   let iconElement = document.querySelector("#icon");
   let descriptionElement = document.querySelector(".description");
+  let todayElement = document.querySelector(".today");
+
 
   celsiusTemperature = response.data.main.temp;
   cityElement.innerHTML = response.data.name;
@@ -104,6 +125,8 @@ function displayWeather(response) {
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
   descriptionElement.innerHTML = response.data.weather[0].description;
+  todayElement.innerHTML = formatToday(response.data.dt * 1000);
+
 
   getForecast(response.data.coord);
 }
